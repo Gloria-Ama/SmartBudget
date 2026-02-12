@@ -1,9 +1,69 @@
 @import "tailwindcss";
 @plugin "daisyui"{
-  themes:corporate;
+  themes:valentine;
 }
 
   button {
     border-radius: 0.25rem;
   }
-  
+ table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background-color: oklch(var(--b1));
+  color: oklch(var(--bc));
+}
+
+thead {
+  background-color: #6d28d9; /* violet */
+  color: white;
+}
+
+th,
+td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid oklch(var(--b3));
+}
+tbody tr:nth-child(even) {
+  background-color: rgba(109, 40, 217, 0.08);
+}
+
+tbody tr:hover {
+  background-color: rgba(109, 40, 217, 0.18);
+  transition: background-color 0.2s ease;
+}
+@media (max-width: 768px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tr {
+    margin-bottom: 1rem;
+    border-radius: 0.75rem;
+    background-color: oklch(var(--b2));
+    padding: 0.75rem;
+  }
+
+  td {
+    border: none;
+    padding: 0.4rem 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #a78bfa; /* violet clair */
+  }
+}
