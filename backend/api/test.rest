@@ -1,0 +1,23 @@
+POST http://localhost:8000/api/transactions/
+Content-Type: application/json
+
+{
+  "amount": 100,
+  "description": "Test transaction"
+}
+
+###
+
+GET http://localhost:8000/api/transactions/
+
+###
+DELETE   http://localhost:8000/api/transactions/id/
+
+###
+PUT  http://localhost:8000/api/transactions/id/
+Content-Type: application/json
+
+
+###
+PATCH http://localhost:8000/api/transactions/id/
+Content-Type: application/json
