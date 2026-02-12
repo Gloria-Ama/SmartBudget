@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@plugin "daisyui"{
+  themes:corporate;
+}
+
+  button {
+    border-radius: 0.25rem;
+  }
+  
