@@ -13,3 +13,10 @@ class Transaction(models.Model):
     def __str__(self):
         return f"{self.text}: {self.amount}"
     
+
+class MonthlyPlanItem(models.Model):
+    category = models.CharField(max_length=100)
+    amount = models.FloatField(default=0)
+
+    def __str__(self):
+        return self.category
